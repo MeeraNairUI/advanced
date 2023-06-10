@@ -1,0 +1,18 @@
+<div class="container">
+  <h4>Parent Component</h4>
+  enter name<input type="text" class="form-control" [(ngModel)]="enterName"/> 
+  <input type="button" value="send" (click)="transferData()" class="btn btn-primary">
+
+ enter enterPhoneNo <input type="number" class="form-control" [(ngModel)]="enterPhoneNo"/>
+  <input type="button" value="send" (click)="transferData()" class="btn btn-primary">
+
+ enter age <input type="number" class="form-control" [(ngModel)]="enterAge"/>
+  <input type="button" value="send" (click)="transferData()" class="btn btn-primary">
+<h4>Received {{value}}</h4>
+
+  <!-- enter text<input type="text" class="form-control" [(ngModel)]="enterText"/>
+  <input type="button" value="send" (click)="transferData()" class="btn btn-primary"> -->
+
+  <app-home [parentData]="parentData" [phone]="phone" [age]="age">  </app-home>
+  <app-about (sendData)="sendData($event)"></app-about>
+</div>
